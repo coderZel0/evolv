@@ -28,6 +28,8 @@
   -webkit-box-shadow: 2px 3px 42px rgba(0, 0, 0, 0.5);
           box-shadow: 2px 3px 42px rgba(0, 0, 0, 0.5);
   border-radius: 10px;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
 }
 
 .tooltip .cap {

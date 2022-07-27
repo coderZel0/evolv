@@ -48,7 +48,22 @@ const UserRow = ({data})=>{
     const [calorie,setCalorie] = useState({});
     const [userDates,setDate] = useState({performedDate:'',scheduledDate:''})
     const [scheduled , setScheduled] = useState(false);
-    const [showtool,setShow] = useState(true);
+    const [showtool,setShow] = useState(false);
+
+    const [nutritionState,setNutrition] = useState([{name:"protein",consumed:proteinConsumed,target:proteinTarget
+                                                    ,color:"#03C7FC"
+                                        },{
+                                            name:"fat",
+                                            consumed:fatConsumed,
+                                            target:fatTarget,
+                                            color:"#F5C90F"
+                                        },
+                                    {
+                                        name:"carb",
+                                        consumed:carbConsumed,
+                                        target:carbTarget,
+                                        color:"#F45C84"
+                                    }])
 
 
     const updateData = (type,action)=>{
@@ -175,7 +190,7 @@ const UserRow = ({data})=>{
                                     <span>calories</span>
                                 </div>
                                 {showtool && <div className='dropdowntool'>
-                                    <ToolTip/>
+                                    <ToolTip data={nutritionState}/>
                                 </div>}
                             </div>
                             <div className='nutrition_target'>
