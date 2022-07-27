@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Flex:opsz,wght@8..144,300&display=swap");
+.tooltip {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 208px;
+  height: 165px;
+  background-color: gainsboro;
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  top: 120%;
+  -webkit-transform: translateX(-34%);
+          transform: translateX(-34%);
+  background: #333B44;
+  -webkit-box-shadow: 2px 3px 42px rgba(0, 0, 0, 0.5);
+          box-shadow: 2px 3px 42px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+.tooltip .cap {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: -6px;
+  background: #333B44;
+  left: 95px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transform: rotate(42deg);
+          transform: rotate(42deg);
+  z-index: -10;
+}
+
+.tooltip .bar_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 196.1px;
+  height: 38.9px;
+  background: #1B222A;
+  border-radius: 4.86207px;
+}
+
+.tooltip .bar_container .bar_title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 179.09px;
+  height: 9.72px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10.5345px;
+  line-height: 13px;
+  color: #FFFFFF;
+}
+
+.tooltip .bar_container .bar_title_text {
+  text-transform: uppercase;
+}
+
+.tooltip .bar_container .bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 179.09px;
+  height: 9.72px;
+  background: #101317;
+  border-radius: 6.48276px;
+}
+
+.tooltip .bar_container .bar .bar_inner {
+  width: 109.01px;
+  height: 9.72px;
+  background: #F45C84;
+  border-radius: 6.48276px;
+}
+
+.tooltip .bar_container .bar span {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 6.48276px;
+  line-height: 8px;
+  text-transform: lowercase;
+  color: #F45C84;
+  margin-left: 1.98px;
+}
+/*# sourceMappingURL=tooltip.css.map */

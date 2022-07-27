@@ -1,0 +1,244 @@
+@import '../variable.scss';
+
+.container{
+    width: 920px;
+    height: 80px;
+    background:$secondary;
+    border-radius: 10px;
+    padding: 4px;
+    margin: 15px 0px;
+    
+    & .inner_container{
+        width:100%;
+        height:100%;
+        @include flexCenter();
+       justify-content: space-between;
+    }
+}
+
+.user{
+    height: 100%;
+    flex:2.5;
+    @include flexCenter();
+    justify-content: flex-start;
+
+    .avatar{
+        margin:0px 5px;
+        width: 39.68px;
+        height: 40px;
+
+        img{
+            width:100%;
+            height: 100%;
+        }
+    }
+
+    .user_details{
+        @include flexCenter(column);
+        font-family: 'Montserrat';
+        margin-left: 13.32px;
+        
+        color:#FFFFFF;
+        .username{
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;  
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17px;
+            text-transform: capitalize;
+        }
+        .email{
+            width: 100%;
+            display: flex;
+            font-size: 10px;
+            line-height: 12px;
+            font-weight: 500;
+            justify-content: flex-start;
+        }
+    }
+}
+
+.work_details_container{
+    height: 100%;
+    flex:5.2;
+    font-family: 'Montserrat';
+   
+    @include flexCenter();
+    
+   justify-content: space-between;
+   .steps_detail,.workout_detail,.nutrition_detail{
+    height:100%;
+    width: 30%;
+    @include flexCenter();
+    }
+
+    
+
+    .workout_detail{
+        
+        width:28%;
+        .usercheck,.userevent{
+            @include flexCenter();
+            width: 90px;
+            height: 30px;
+            border-radius: 8px;
+            span{
+                
+                color:#FFFFFF;
+                margin-left: 7.48px;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 17px;
+                text-transform: capitalize;
+            }
+        }
+    }
+
+    .nutrition_detail{
+        .pie_container{
+            position: relative;
+
+            .calouries{
+                top:0;
+                left:0;
+                position: absolute;
+                width:100%;
+                height: 100%;
+                @include flexCenter(column);
+
+                .calories_num{
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 12px;
+                    line-height: 15px;
+                    text-transform: capitalize;
+                    color:#FFFFFF;
+                }
+                span{
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 8px;
+                    line-height: 10px;
+                    color: #BDBCBE;
+                }
+            }
+        }
+
+        .tooltipcontainer{
+            @include flexCenter();
+        
+        }
+        
+    }
+}
+
+.notification_container{
+    height: 100%;
+    flex:1;
+   
+    @include flexCenter();
+    justify-content: flex-end;
+    .notify_icon{
+        @include flexCenter();
+        width:40px;
+        height: 40px;
+        background: #36F5C7;
+        border-radius: 8px;
+        margin-right: 14px;
+    }
+}
+
+.wrapper{
+    width:100%;
+    height: 100%;
+    @include flexCenter();
+}
+
+.wrapper_inner_left{
+    @include flexCenter();
+    position: relative;
+    height: 100%;
+    flex:2;
+
+    
+    .controls{
+        @include flexCenter(column);
+        justify-content: space-between;
+        position: absolute;
+        height:100%;
+        margin-right: 1px;
+        width:auto;
+        right: 0;
+
+        .increment,.decrement{
+            @include flexCenter();
+            font-size: 16px;
+            width:30px;
+            height: 16px;
+            background-color: #101317;
+            border-radius: 4px;
+            text-align: center;
+            color:#FFFFFF;
+            cursor:pointer;
+        }
+    }
+
+    .steps_target,.nutrition_target{
+        @include flexCenter(column);
+        margin-left: 17px;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+        color:#FFFFFF;
+        
+        width:30px;
+        span{
+            font-weight: 500;
+            font-size: 10px;
+            line-height: 12px;
+            color: #BDBCBE;
+        }
+    }
+
+    .steps_walked{
+        @include flexCenter(column);
+        color:#FFFFFF;
+        font-style: normal;
+
+        .steps_num{
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 15px;
+            text-transform: capitalize;
+        }
+
+        span{
+            font-style: normal;
+            font-weight: 500;
+            font-size: 8px;
+            line-height: 10px;
+            color: #BDBCBE;
+        }
+    }
+}
+
+
+
+.wrapper_inner_right{
+    @include flexCenter();
+    height: 100%;
+    flex:1;
+
+    .option{
+        @include flexCenter();
+        width: 30px;
+        height: 60px;
+        background: #101317;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+}

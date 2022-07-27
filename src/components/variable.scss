@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Flex:opsz,wght@8..144,300&display=swap');
+
+$primary : #101317;
+$secondary:#1E262F;
+
+@mixin flexCenter($direction:row){
+    display:flex;
+    flex-direction:$direction;
+    align-items:center;
+    justify-content:center;
+}

@@ -1,0 +1,66 @@
+@import '../variable.scss';
+
+
+.outer_container{
+    position:relative;
+    width:1000px;
+    height:641px;
+    background-color: #1F2731;
+    @include flexCenter;
+}
+
+.main_container{
+    width:80%;
+    height:70%;
+    min-width:950px;
+    min-height: 501px;
+    background-color:$primary;
+    border-radius: 16px;
+    box-shadow: 2px 3px 42px rgba(0, 0, 0, 0.5);
+    position: relative;
+    @include flexCenter(column);
+
+    .title{
+        @include flexCenter;
+        justify-content: space-around;
+        position: absolute;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 22px;
+        text-transform: capitalize;
+        color: #FFFFFF;
+        font-family: 'Montserrat', sans-serif;
+    }
+    .steps{
+        width: 78px;
+        height: 22px;
+        left: 330px;
+        top: 21px;
+    }
+    .workout{
+        width: 121px;
+        height: 30px;
+        left: 478px;
+        top: 17px;
+
+    }
+    .nutrition{
+        width: 124px;
+        height: 22px;
+        left: 686px;
+        top: 21px;
+    }
+}
+
+.containers{
+    position: absolute;
+    box-sizing: border-box;
+    top:71px;
+    width: 100%;
+    height: 98%;
+    @include flexCenter(column);
+    justify-content: flex-start;
+   
+}
+
