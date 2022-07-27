@@ -3,6 +3,8 @@ import './container.css';
 import avatar from '../../assets/image 22.png';
 import {ReactComponent as Usercheck} from '../../assets/usercheck.svg';
 import {ReactComponent as EventIcon} from '../../assets/event.svg';
+import {TbCalendarTime} from 'react-icons/tb';
+import {FaCalendarClock} from 'react-icons/fa';
 import {ReactComponent as Positive} from '../../assets/positive.svg';
 import {ReactComponent as Negative} from '../../assets/negative.svg';
 import {ReactComponent as Notification} from '../../assets/Vector (3).svg';
@@ -169,7 +171,7 @@ const UserRow = ({data})=>{
                                     <span>{userDates.performedDate}</span>
                                 </div>
                                 <div className='userevent' style={scheduled?{marginTop:"4px",backgroundColor:"#CC3838"}:{marginTop:"4px"}}>
-                                        <EventIcon/>
+                                        <TbCalendarTime style={{border:"#FFFFFF",width:"22px",height:"22px"}} stroke="#FFFFFF" fill={"rgba(0,0,0,0)"}/>
                                         <span style={{marginLeft:"11.25px"}}>{userDates.scheduledDate}</span>
                                 </div>
                             </div>
