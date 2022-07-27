@@ -12,8 +12,9 @@ import {CircularProgressbarWithChildren,buildStyles} from 'react-circular-progre
 import 'react-circular-progressbar/dist/styles.css';
 import {PieChart} from 'react-minimal-pie-chart';
 import ToolTip from '../tooltip/ToolTip';
+import { Link } from 'react-router-dom';
 
-const Wrapper = ({open,controls,children,type,updateData,feedback})=>{
+const Wrapper = ({open,controls,children,type,updateData,feedback,id})=>{
     return <>
         <div className="wrapper">
             <div style={!open?{flex:0}:null} className='wrapper_inner_left'>
@@ -25,9 +26,12 @@ const Wrapper = ({open,controls,children,type,updateData,feedback})=>{
             </div>
             
             <div style={(!open)?{visibility:"hidden",pointerEvents:"none",display:"none"}:null} className='wrapper_inner_right'>
-                <div style={feedback?{backgroundColor:"#CC3838"}:null} className="option">
-                    {!feedback?<Option/>:<Exclamation/>}
-                </div>
+                
+                <Link style={feedback?{pointerEvents:"none"}:null} to={`/${id+"/"+type}`}>
+                    <div style={feedback?{backgroundColor:"#CC3838"}:null} className="option">
+                        {!feedback?<Option/>:<Exclamation/>}
+                    </div>
+                </Link>
             </div>
            
             
@@ -158,7 +162,7 @@ const UserRow = ({data})=>{
                         </Wrapper>
                     </div>
                     <div className="workout_detail">
-                        <Wrapper feedback={feedback} updateData={updateData} open={true}>
+                        <Wrapper id={data.userId} type={"workout"} feedback={feedback} updateData={updateData} open={true}>
                             <div style={{display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center"}}>
                                 <div className='usercheck' style={{marginBottom:"4px"}}>
                                     <Usercheck/>
@@ -173,7 +177,7 @@ const UserRow = ({data})=>{
                         </Wrapper>
                     </div>
                     <div className="nutrition_detail">
-                        <Wrapper type={"nutrition"} updateData={updateData} open={true} controls={true}>
+                        <Wrapper id={data.userId} type={"nutrition"} updateData={updateData} open={true} controls={true}>
                             <div  onMouseOver={()=>setShow(true)} onMouseOut={()=>setShow(false)} className='pie_container' style={{width:60,height:60}}>
                                 <PieChart
                                 lineWidth={30}

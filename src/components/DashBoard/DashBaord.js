@@ -6,8 +6,8 @@ import UserRow from '../userrow/UserRow';
 
 import {ReactComponent as Steps} from '../../assets/Vector.svg';
 import {ReactComponent as Nutrition} from '../../assets/Vector (1).svg';
-
-import Gym from '../../assets/gym.png';
+import {ReactComponent as Gym} from '../../assets/gym.svg';
+import GymImage from '../../assets/gym.png';
 
 
 const DashBoard = ({userData})=>{
@@ -20,7 +20,10 @@ const DashBoard = ({userData})=>{
                     <span>Steps</span>
                 </div>
                 <div className="title workout">
-                   <Steps/>
+                    <div style={{width:"20px",height:"20px"}}>
+                       <Gym fill='#FFFFFF' />
+                    </div>
+                   
                     <span>workout</span>
                 </div>
                 <div className="title nutrition">
